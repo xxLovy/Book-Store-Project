@@ -10,7 +10,7 @@ const CreateBook = () => {
     const [author, setAuthor] = useState('')
     const [publishYear, setPublishYear] = useState('')
 
-    const [loading, setLoading] = useState('')
+    const [loading, setLoading] = useState(false)
     // what is this??
     const navigate = useNavigate()
     const handleSaveBook = () => {
@@ -20,7 +20,7 @@ const CreateBook = () => {
             publishYear,
         }
         setLoading(true)
-        // then accepts 2 prams
+        // then accepts 2 prams?
         axios
             .post(`${adress}/books`, data)
             .then(() => {
